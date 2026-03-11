@@ -1,0 +1,11 @@
+SOC Incident Report
+Generated: 2026-03-11
+----------------------------------------
+
+Threat Type : Brute Force Attack
+Source IP   : 192.168.1.10
+Attempts    : 7
+
+Threat Type : Multi-user Login Attempts
+Source IP   : 192.168.1.11
+Users Tried : ['root', 'admin', 'guest']
