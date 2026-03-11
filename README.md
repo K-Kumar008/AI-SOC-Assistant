@@ -1,67 +1,147 @@
 # AI SOC Assistant
 
-AI SOC Assistant is a Python-based Security Operations Center (SOC) automation tool that analyzes authentication logs, detects cyber attacks, and generates incident reports.
+## Overview
+
+AI SOC Assistant is a Python-based Security Operations Center (SOC) automation tool that analyzes Linux authentication logs to detect potential cyber attacks.
+The system parses log files, applies detection rules, generates SOC-style incident reports, and optionally performs AI-based threat analysis.
+
+This project simulates how SOC analysts monitor logs and identify suspicious activity.
+
+---
 
 ## Features
 
+* Log Parsing from Linux authentication logs
 * Brute Force Attack Detection
 * Port Scan Detection
 * Multiple User Login Attempt Detection
 * SOC Incident Report Generation
-* AI-powered threat analysis (optional)
+* Optional AI-based threat explanation
+* Synthetic log generation for testing
+
+---
 
 ## Project Architecture
 
 Logs → Parser → Detection Engine → Report Generator → AI Analysis
 
+---
+
+## Folder Structure
+
+ai-soc-assistant/
+
+detection/ → attack detection rules
+parser/ → log parsing module
+ai_analysis/ → AI threat analysis
+logs/ → authentication log files
+reports/ → generated SOC reports
+screenshots/ → project screenshots
+
+generate_logs.py → generates test logs
+main.py → main execution script
+
+---
+
 ## Installation
 
-```bash
-git clone https://github.com/yourusername/ai-soc-assistant.git
+Clone the repository:
+
+```
+git clone https://github.com/YOUR_USERNAME/ai-soc-assistant.git
 cd ai-soc-assistant
+```
+
+Install dependencies:
+
+```
 pip install -r requirements.txt
 ```
 
+---
+
 ## Usage
 
-Generate logs:
+### 1 Generate sample logs
 
-```bash
+```
 python3 generate_logs.py
 ```
 
-Run SOC assistant:
+This creates synthetic authentication logs in the logs directory.
 
-```bash
+### 2 Run the SOC assistant
+
+```
 python3 main.py
 ```
 
+The program will:
+
+1. Parse log entries
+2. Detect suspicious activity
+3. Generate a SOC incident report
+4. Optionally run AI threat analysis
+
+---
+
 ## Example Output
 
-SOC Incident Report:
+SOC Incident Report
 
-* Brute Force Attack detected
-* Port Scan detected
-* Multi-user login attempts detected
+Threat Type: Brute Force Attack
+Source IP: 192.168.1.10
+Attempts: 7
+
+Threat Type: Multi-user Login Attempts
+Source IP: 192.168.1.11
+Users Tried: root, admin, guest
+
+---
 
 ## Screenshots
 
 ### Folder Structure
 
-![Folder](screenshots/folder_structure.png)
+(Add screenshot here)
 
 ### Sample Logs
 
-![Logs](screenshots/sample_logs.png)
+(Add screenshot here)
 
 ### Incident Report
 
-![Report](screenshots/incident_report.png)
+(Add screenshot here)
 
 ### AI Analysis
 
-![AI](screenshots/ai_analysis.png)
+(Add screenshot here)
+
+---
+
+## Technologies Used
+
+Python
+Regular Expressions
+Log Analysis
+OpenAI API (optional)
+
+---
+
+## Future Improvements
+
+Real-time log monitoring
+Integration with SIEM tools
+Email alert system
+MITRE ATT&CK mapping
+Web dashboard for SOC monitoring
+
+---
 
 ## Author
 
-Krishna – Cybersecurity Enthusiast
+Krishna
+Cybersecurity Enthusiast
+
+
+
